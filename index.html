@@ -3,7 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>kAris's Todo List with Vanilla JS</title>
   </head>
-  <body></body>
+  <body>
+    <div class="todo-wrapper">
+      <div class="todo-title">kAris's To Do</div>
+      <div class="todo-box">
+        <div class="todo-input-box">
+          <button class="all-btn">☑️</button>
+          <input
+            class="todo-input"
+            type="text"
+            placeholder="What you have to do is"
+          />
+        </div>
+
+        <ul class="todo-list">
+          <!-- <li class="todo-item checked">
+          <div class="checkbox">✔</div>
+          <div class="todo">첫번째 할 일</div>
+          <button class="delBtn">x</button>
+        </li>
+        <li class="todo-item">
+          <div class="checkbox"></div>
+          <div class="todo">두번째 할 일</div>
+          <button class="delBtn">x</button>
+        </li>
+        <li class="todo-item">
+          <div class="checkbox"></div>
+          <div class="todo">세번째 할 일</div>
+          <button class="delBtn">x</button>
+        </li> -->
+        </ul>
+        <div class="todo-bottom">3 items left</div>
+        <div class="button-group">
+          <button class="all-btn selected" data-type="all">All</button>
+          <button class="active-btn" data-type="active">Active</button>
+          <button class="completed-btn" data-type="completed">Completed</button>
+        </div>
+        <button class="clear-btn">Clear completed</button>
+      </div>
+      <p class="info">더블클릭 시 수정 가능 🙂</p>
+    </div>
+    <script src="todo.js"></script>
+  </body>
 </html>
