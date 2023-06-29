@@ -116,6 +116,7 @@ button {
   font-weight: lighter;
   cursor: pointer;
 }
+
 .todo-bottom {
   height: 3rem;
   display: flex;
