@@ -22,6 +22,21 @@ const appendTodos = () => {
   paintTodos();
 };
 
+const deleteTodo = (todoId) => {
+  console.log(todoId);
+  const newTodos = getAllTodos().filter((todo) => todo.id !== todoId);
+  setTodos(newTodos);
+  paintTodos();
+};
+
+const completeTodo = (todoId) => {
+  const newTodos = getAllTodos().map((todo) =>
+    todoId ? { ...todo, isCompleted: !todo.isCompleted } : todo
+  );
+  setTodos(newTodos);
+  paintTodos();
+};
+
 const paintTodos = () => {
   todoListElem.innerHTML = ""; //todoListElem 요소 안의 HTML 초기화
   const allTodos = getAllTodos(); // todos 배열 가져오기
@@ -36,6 +51,7 @@ const paintTodos = () => {
     const checkboxElem = document.createElement("div");
     checkboxElem.classList.add("checkbox");
     checkboxElem.addEventListener("click", () => completeTodo(todo.id));
+    //click 이벤트 발생시, 완료 처리
 
     const todoElem = document.createElement("div");
     todoElem.classList.add("todo");
