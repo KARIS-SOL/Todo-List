@@ -1,3 +1,4 @@
+"use strict";
 const todoInputElem = document.querySelector(".todo-input");
 const todoListElem = document.querySelector(".todo-list");
 
